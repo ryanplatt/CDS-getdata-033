@@ -59,5 +59,13 @@ q2data<-alldata[,q2]
 #group by activity and subject and give the mean for each set
 q5<-q2data[-3] %>% group_by(activity,Subject)  %>% summarise_each(funs(mean))
 
+#Update column names to indicate they are the mean of the previous column
+colNamesq5<-colnames(q5)
+colNamesq5t1<-colNamesq5[c(1,2)]
+colNamesq5t2<-colNamesq5[c(-1,-2)]
+colNamesq5t2<-paste("MeanOf",colNamesq5t2,sep="_")
+colNamesq5<-c(colNamesq5t1,colNamesq5t2)
+colnames(q5)<-colNamesq5
+
 #write the table to disk
 write.table(q5,file="q5.txt",row.name=FALSE)
