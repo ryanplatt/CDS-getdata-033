@@ -22,7 +22,8 @@ For each record in the dataset it is provided:
 - Its activity label. 
 - An identifier of the subject who carried out the experiment.
 </i>
- - source (1)
+ source (1)
+
 #Features Selected
 
 <i>
@@ -83,7 +84,8 @@ tBodyGyroJerkMean
 
 The complete list of variables of each feature vector is available in 'features.txt'
 </i>
- - source (2)
+ source (2)
+ 
 #Transformations
 
 Features were read from the UCI HAR Dataset/features.txt file.<br>
