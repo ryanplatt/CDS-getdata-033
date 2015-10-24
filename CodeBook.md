@@ -83,8 +83,8 @@ The complete list of variables of each feature vector is available in 'features.
 
 #Transformations
 
-Features were read from the UCI HAR Dataset/features.txt file
-Activity labels were read from the UCI HAR Dataset/activity_labels.txt file
+Features were read from the UCI HAR Dataset/features.txt file.<br>
+Activity labels were read from the UCI HAR Dataset/activity_labels.txt file.<br>
 Training and test sets were read from the following files:
  * UCI HAR Dataset/test/X_test.txt
  * UCI HAR Dataset/test/y_test.txt
