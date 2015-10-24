@@ -9,7 +9,7 @@ This was downloaded on 23/10/2015. (2)
 
 The data in this zip file was generated for the project, "Human Activity Recognition Using Smartphnes Data Set"(1)
 
-#Data Set Information
+#Original Data Set Information
 
 <i>The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
@@ -23,7 +23,7 @@ For each record in the dataset it is provided:
 - An identifier of the subject who carried out the experiment.
 </i> (1)
 
-#Features Selected
+#Original Features Selected
 
 <i>
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
@@ -123,6 +123,14 @@ This was accomplished using group_by and then summarize_each functions from the 
 
 Column Names for features were updated by appending "MeanOf_" to them. The rest of the name remained the same, to allow for future linking of column data.
 Finally, the q5 frame was written to disk in the current working directory as q5.txt
+
+#Resultant Data Set Information
+
+The data set provided in q5.txt has the following columns:
+* Activity - contains one of the set {WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING}
+* Subject - contains the subject person. Numeric from 1-30
+* MeanOf_* - set of columns, containing the mean results when grouped by activity and subject, of features in the original data set. The only features listed, are only those concerning mean or standard deviation from the original dataset. As they are the mean, the units are as per the original dataset. A full listing of the features is below:
+"MeanOf_tBodyAcc-mean()-X" "MeanOf_tBodyAcc-mean()-Y" "MeanOf_tBodyAcc-mean()-Z" "MeanOf_tGravityAcc-mean()-X" "MeanOf_tGravityAcc-mean()-Y" "MeanOf_tGravityAcc-mean()-Z" "MeanOf_tBodyAccJerk-mean()-X" "MeanOf_tBodyAccJerk-mean()-Y" "MeanOf_tBodyAccJerk-mean()-Z" "MeanOf_tBodyGyro-mean()-X" "MeanOf_tBodyGyro-mean()-Y" "MeanOf_tBodyGyro-mean()-Z" "MeanOf_tBodyGyroJerk-mean()-X" "MeanOf_tBodyGyroJerk-mean()-Y" "MeanOf_tBodyGyroJerk-mean()-Z" "MeanOf_tBodyAccMag-mean()" "MeanOf_tGravityAccMag-mean()" "MeanOf_tBodyAccJerkMag-mean()" "MeanOf_tBodyGyroMag-mean()" "MeanOf_tBodyGyroJerkMag-mean()" "MeanOf_fBodyAcc-mean()-X" "MeanOf_fBodyAcc-mean()-Y" "MeanOf_fBodyAcc-mean()-Z" "MeanOf_fBodyAccJerk-mean()-X" "MeanOf_fBodyAccJerk-mean()-Y" "MeanOf_fBodyAccJerk-mean()-Z" "MeanOf_fBodyGyro-mean()-X" "MeanOf_fBodyGyro-mean()-Y" "MeanOf_fBodyGyro-mean()-Z" "MeanOf_fBodyAccMag-mean()" "MeanOf_fBodyBodyAccJerkMag-mean()" "MeanOf_fBodyBodyGyroMag-mean()" "MeanOf_fBodyBodyGyroJerkMag-mean()" "MeanOf_tBodyAcc-std()-X" "MeanOf_tBodyAcc-std()-Y" "MeanOf_tBodyAcc-std()-Z" "MeanOf_tGravityAcc-std()-X" "MeanOf_tGravityAcc-std()-Y" "MeanOf_tGravityAcc-std()-Z" "MeanOf_tBodyAccJerk-std()-X" "MeanOf_tBodyAccJerk-std()-Y" "MeanOf_tBodyAccJerk-std()-Z" "MeanOf_tBodyGyro-std()-X" "MeanOf_tBodyGyro-std()-Y" "MeanOf_tBodyGyro-std()-Z" "MeanOf_tBodyGyroJerk-std()-X" "MeanOf_tBodyGyroJerk-std()-Y" "MeanOf_tBodyGyroJerk-std()-Z" "MeanOf_tBodyAccMag-std()" "MeanOf_tGravityAccMag-std()" "MeanOf_tBodyAccJerkMag-std()" "MeanOf_tBodyGyroMag-std()" "MeanOf_tBodyGyroJerkMag-std()" "MeanOf_fBodyAcc-std()-X" "MeanOf_fBodyAcc-std()-Y" "MeanOf_fBodyAcc-std()-Z" "MeanOf_fBodyAccJerk-std()-X" "MeanOf_fBodyAccJerk-std()-Y" "MeanOf_fBodyAccJerk-std()-Z" "MeanOf_fBodyGyro-std()-X" "MeanOf_fBodyGyro-std()-Y" "MeanOf_fBodyGyro-std()-Z" "MeanOf_fBodyAccMag-std()" "MeanOf_fBodyBodyAccJerkMag-std()" "MeanOf_fBodyBodyGyroMag-std()" "MeanOf_fBodyBodyGyroJerkMag-std()"
 
 #References
 
