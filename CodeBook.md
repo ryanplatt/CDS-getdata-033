@@ -21,8 +21,7 @@ For each record in the dataset it is provided:
 - A 561-feature vector with time and frequency domain variables. 
 - Its activity label. 
 - An identifier of the subject who carried out the experiment.
-</i><br><br>
- source (1)
+</i> (1)
 
 #Features Selected
 
@@ -83,8 +82,7 @@ tBodyGyroMean
 tBodyGyroJerkMean
 
 The complete list of variables of each feature vector is available in 'features.txt'
-</i><br><br>
- source (2)
+</i> (2)
  
 #Transformations
 
